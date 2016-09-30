@@ -12,6 +12,9 @@ ENV MAVEN_HOME=/opt/app/apache-maven-3.3.9
 ENV NODE_HOME=/opt/app/node-v6.4.0-linux-x64
 ENV PATH=${PATH}:${MAVEN_HOME}/bin:${NODE_HOME}/bin
 
+ENV JVM_MIN_MEM=512
+ENV JVM_MAX_MEM=1024
+
 # Jenkins home directory is a volume, so configuration and build history
 # can be persisted and survive image upgrades
 VOLUME ${JENKINS_WORK}
