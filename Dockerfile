@@ -41,7 +41,7 @@ RUN curl -sSL https://get.docker.com/ | sh && systemctl enable docker.service
 #
 # jenkins
 #
-ADD ./resources/entrypoint.sh ${JENKINS_HOME}/
+ADD resources/entrypoint.sh ${JENKINS_HOME}/
 RUN mkdir -p /opt/app/jenkins/ \
   && curl --fail --location --retry 3 \
     http://ftp.yz.yamagata-u.ac.jp/pub/misc/jenkins/war/latest/jenkins.war \
