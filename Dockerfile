@@ -9,7 +9,7 @@ ENV JENKINS_WORK=/jenkins
 # jenkins programs, jenkins.war, entrypoint.sh
 ENV JENKINS_HOME=/opt/app/jenkins
 ENV MAVEN_HOME=/opt/app/apache-maven-3.3.9
-ENV NODE_HOME=/opt/app/node-v6.4.0-linux-x64
+ENV NODE_HOME=/opt/app/node-v6.7.0-linux-x64
 ENV PATH=${PATH}:${MAVEN_HOME}/bin:${NODE_HOME}/bin
 
 ENV JVM_MIN_MEM=512
@@ -61,7 +61,7 @@ RUN curl --fail --location --retry 3 \
 # node
 #
 RUN curl --fail --location --retry 3 \
-    https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz \
+    https://nodejs.org/dist/v6.7.0/node-v6.7.0-linux-x64.tar.gz \
     -o /tmp/node.tar.gz \
   && tar -zvxf /tmp/node.tar.gz -C /opt/app/ \
   && rm -f /tmp/node.tar.gz
