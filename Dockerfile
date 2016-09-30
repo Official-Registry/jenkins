@@ -52,7 +52,7 @@ RUN mkdir -p /opt/app/jenkins/ \
 # apache-maven
 #
 RUN curl --fail --location --retry 3 \
-    http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
+    https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
     -o /tmp/maven.tar.gz \
   && tar -zvxf /tmp/maven.tar.gz -C /opt/app/ \
   && rm -f /tmp/maven.tar.gz
