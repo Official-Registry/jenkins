@@ -33,7 +33,7 @@ Add insecure docker registry configuration
 `# Generate ubuntu docker configuration file`  
 `echo "DOCKER_OPTS=\"--insecure-registry euler-registry.primeton.com\"" > /some/dir/docker`  
 `# Run jenkins image`
-`docker run --privileged --restart always -d -p 8080:8080 -p 50000:50000 -v /some/dir/docker:/etc/default/docker -v /some/dir:/jenkins --add-host=euler-registry.primeton.com:10.15.15.172 -e JAVA_OPTS="-Xms1024m -Xmx2048m" euler-registry.primeton.com/jenkins:1.1.0`
+`docker run --privileged --restart always -d -p 8080:8080 -p 50000:50000 -v /some/dir/docker:/etc/default/docker -v /some/dir:/jenkins --add-host=euler-registry.primeton.com:10.15.15.172 -e JVM_MIN_MEM=1024 -e JVM_MAX_MEM=2048 quay.io/lizhongwen/jenkins`
   
   
 # VOLUME  
