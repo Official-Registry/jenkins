@@ -31,7 +31,7 @@ EXPOSE 8080 50000
 #
 # linux tool
 #
-RUN apt-get update && apt-get install -y git curl zip unzip wget expect tar ftp iputils-ping apt-transport-https ca-certificates lxc iptables dmsetup
+RUN apt-get update && apt-get install -y git curl zip unzip bzip2 wget expect tar ftp iputils-ping apt-transport-https ca-certificates lxc iptables dmsetup
 
 #
 # docker-in-docker
