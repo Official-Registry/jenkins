@@ -44,7 +44,7 @@ RUN curl -sSL https://get.docker.com/ | sh && systemctl enable docker.service
 ADD resources/entrypoint.sh ${JENKINS_HOME}/
 RUN mkdir -p /opt/app/jenkins/ \
   && curl --fail --location --retry 3 \
-    http://ftp.tsukuba.wide.ad.jp/software/jenkins/war-stable/latest/jenkins.war \
+    http://ftp.tsukuba.wide.ad.jp/software/jenkins/war-stable/2.19.2/jenkins.war \
     -o /opt/app/jenkins/jenkins.war \
   && chmod +x ${JENKINS_HOME}/entrypoint.sh 
 
