@@ -51,3 +51,4 @@ Add insecure docker registry configuration
 `echo "JENKINS_HOME=${JENKINS_HOME}"`  
 `echo "JENKINS_WORK=${JENKINS_WORK}"`  
 
+# Tigger Auto Build
